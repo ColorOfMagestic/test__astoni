@@ -39,7 +39,7 @@ $fontSecond:"Merriweather";
 /* Variables*/
 $base_font: $font, sans-serif;
 $base_size: 16px;
-$base_line-height: 1;
+$base_line-height: 1.5;
 $tr_md: 0.5s;
 
 /* Color */
@@ -166,7 +166,7 @@ select {
   align-items: $ai;
 }
 
-@mixin hover($bgc, $color, $border-color) {
+@mixin hover($bgc, $color, $border-color: none) {
   &:hover {
     background-color: $bgc;
     color: $color;
@@ -233,5 +233,16 @@ html {
 
 .title {
   font-family: $fontSecond, sans-serif;
+  font-size: 24px;
+  text-align: center;
+  color: $white;
+  font-weight: 700;
+  @include  media-size(md) {
+    font-size: 36px;
+    text-align: left;
+  }
+  @include  media-size(lg) {
+    font-size: 48px;
+  }
 }
 

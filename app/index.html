@@ -8,11 +8,12 @@
         BuhOne
     </title>
     <link rel="shortcut icon" href="/img/logo.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="css/libraries/libraries.min.js" />
+    <link rel="stylesheet" href="css/libraries/libraries.min.css" />
     <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
 <body class="page-body">
+    <!-- ========== Start header ========== -->
     <header class="header">
         <div class="container">
             <div class="header-wrapper">
@@ -55,12 +56,39 @@
             </div>
         </div>
     </header>
+    <!-- ========== End header ========== -->
     <main class="page-main">
+        <!-- ========== Start intro ========== -->
+        <article class="intro">
+            <div class="intro-swiper swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/slider-img.png" alt="Изображение1"/></div>
+                    <div class="swiper-slide"><img src="img/slider-img.png" alt="Изображение2"/></div>
+                    <div class="swiper-slide"><img src="img/slider-img.png" alt="Изображение3"/></div>
+                    <div class="swiper-slide"><img src="img/slider-img.png" alt="Изображение4"/></div>
+                </div>
+            </div>
+                <div class="intro-wrapper container">
+                    <h1 class="title intro-title">Бухгалтерские услуги<br> в Санкт-Петербурге</h1>
+                    <a  href="javascript:void(0)">Наша презентация</a>
+                </div>
+                <div class="intro-controls container">
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-buttons">
+                        <button data-role="prev" class="swiper-button swiper-button-prev"><svg class="icon"><use xlink:href="img/sprite.svg#arrow"></use></svg></button>
+                        <button data-role="next" class="swiper-button swiper-button-next"><svg class="icon"><use xlink:href="img/sprite.svg#arrow"></use></svg></button>
+                    </div>
+
+                </div>
+        </article>
+        <!-- ========== End intro ========== -->
     </main>
+    <!-- ========== Start footer ========== -->
     <footer class="footer">
         <div class="container">
         </div>
     </footer>
+    <!-- ========== End footer ========== -->
 
     <script type="module" src="js/libraries.min.js"></script>
     <script type="module" src="js/main.min.js"></script>

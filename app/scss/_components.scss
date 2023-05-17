@@ -3,11 +3,11 @@
 %btn_default {
   border: none;
   cursor: pointer;
-  // color: $text;
-  // background-color: $hex;
-  // border: 1px solid $border-color;
-  // @include flex();
-  // @include font();
+  color: $white;
+  background-color: $accent;
+  border: none;
+  @include flex(center, center);
+  @include font(18px, 400, 1.4 );
 }
 
 %link {
