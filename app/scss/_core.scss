@@ -47,6 +47,7 @@ $bg: #f9f9f9;
 $white: #ffffff;
 $accent: #005fa3;
 $textColor: #222222;
+$black: #000000;
 
 
 /*Breakpoints*/
@@ -189,7 +190,8 @@ html {
   margin: 0 auto;
   font-family: $base_font;
   line-height: $base_line-height;
-  color: $black;
+  background-color: $bg;
+  color: $textColor;
 }
 
 .body_hidden {
@@ -230,6 +232,6 @@ html {
 }
 
 .title {
-  font-family: $fontSecond;
+  font-family: $fontSecond, sans-serif;
 }
 
