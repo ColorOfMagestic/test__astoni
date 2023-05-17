@@ -1,0 +1,235 @@
+// contains variables, resets, mixins, and other similar styles
+
+/* Fonts*/
+
+$font:"Lato";
+$fontSecond:"Merriweather";
+
+@font-face {
+  font-family: $font;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/dist/#{$font}-Regular.woff2"), url("../fonts/dist/#{$font}-Regular.woff");
+}
+@font-face {
+  font-family: $font;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/dist/#{$font}-Light.woff2"), url("../fonts/dist/#{$font}-Light.woff");
+}
+@font-face {
+  font-family: $font;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/dist/#{$font}-Bold.woff2"), url("../fonts/dist/#{$font}-Bold.woff");
+}
+@font-face {
+  font-family: $fontSecond;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/dist/#{$fontSecond}-Bold.woff2"), url("../fonts/dist/#{$fontSecond}-Bold.woff");
+}
+
+
+
+/* Variables*/
+$base_font: $font, sans-serif;
+$base_size: 16px;
+$base_line-height: 1;
+$tr_md: 0.5s;
+
+/* Color */
+$bg: #f9f9f9;
+$white: #ffffff;
+$accent: #005fa3;
+$textColor: #222222;
+
+
+/*Breakpoints*/
+
+$xs: 320px;
+$sm: 576px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1400px;
+$xxl: 1800px;
+
+/* Reset*/
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-width: $xs;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+
+/* Mixins*/
+
+@mixin media-size($bp) {
+  @if ($bp == xs) {
+    @media (min-width: $xs) {
+      @content;
+    }
+  } @else if ($bp == sm) {
+    @media (min-width: $sm) {
+      @content;
+    }
+  } @else if ($bp == md) {
+    @media (min-width: $md) {
+      @content;
+    }
+  } @else if ($bp == lg) {
+    @media (min-width: $lg) {
+      @content;
+    }
+  } @else if ($bp == xl) {
+    @media (min-width: $xl) {
+      @content;
+    }
+  }@else if ($bp == xxl) {
+    @media (min-width: $xxl) {
+      @content;
+    }
+  }@else {
+    @error "UNKNOWN MEDIA BREAKPOINT #{$bp}";
+  }
+}
+
+@mixin font($size, $weight, $height: $base_line-height) {
+  font-size:$size;
+  line-height: $height;
+  font-weight: $weight;
+}
+
+@mixin flex($jc,$ai) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+@mixin hover($bgc, $color, $border-color) {
+  &:hover {
+    background-color: $bgc;
+    color: $color;
+    border-color: $border-color;
+    }
+}
+
+// Othes styles
+
+html {
+  height: 100%;
+  font-size: $base_size;
+}
+
+.page-body {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  min-width: $xs;
+  min-height: 100%;
+  margin: 0 auto;
+  font-family: $base_font;
+  line-height: $base_line-height;
+  color: $black;
+}
+
+.body_hidden {
+  overflow: hidden;
+} 
+
+.header {
+  flex: 0 0 auto;
+ }
+ 
+ .page-main {
+   flex: 1 0 auto;
+ 
+ }
+ .footer {
+   flex: 0 0 auto;
+ }
+
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  @include media-size(xs) {
+    max-width: 300px;
+  }
+  @include media-size(sm) {
+    max-width: 510px;
+  }
+  @include media-size(md) {
+    max-width: 690px;
+  }
+  @include media-size(lg) {
+    max-width: 930px;
+  }
+  @include media-size(xl) {
+    max-width: 1116px;
+  }
+}
+
+.title {
+  font-family: $fontSecond;
+}
+

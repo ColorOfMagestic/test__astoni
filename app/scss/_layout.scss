@@ -1,0 +1,29 @@
+// contains styles for header and footer, grid, etc.
+.flex {
+  @include flex(flex-start,flex-start);
+}
+.flex-sc {
+  @include flex(flex-start,center);
+}
+.flex--cc {
+  @include flex(center,center);
+}
+
+/* HEADER */ 
+
+.header {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  // background-color: ;
+}
+
+/* FOOTER*/
+
+.footer {
+  position: relative;
+  // background-color: ;
+}
+
+
+

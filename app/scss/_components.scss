@@ -1,0 +1,131 @@
+// styles for each component needed for this project, including buttons, modal windows, etc.
+
+%btn_default {
+  border: none;
+  cursor: pointer;
+  // color: $text;
+  // background-color: $hex;
+  // border: 1px solid $border-color;
+  // @include flex();
+  // @include font();
+}
+
+%link {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+}
+
+%label {
+  display: block;
+  width: 100%;
+}
+
+%input {
+  width: 100%;
+  height: 100%;
+  padding: 0.75rem 0.625rem;
+  width: 100%;
+  font-size: 1em;
+  // color: $dark;
+  // background-color: $input_bg;
+  // border-radius: 3px;
+  // border: 1px solid $white;
+  transition: $tr_md;
+  outline: 0;
+
+  @include media-size(xxl) {
+    font-size: 1.125em;
+  }
+
+  &::placeholder {
+    opacity: 1;
+  }
+
+  &:focus {
+    color: white;
+    background-color: rgba(61, 64, 80, 0.85);
+  }
+
+}
+
+
+
+
+/*creating color button and link classes*/
+
+// @each $color, $hex, $text, $border-color in ($btn1, $btn2) {
+
+//   .btn_#{$color} {
+//     background-color: $hex;
+//     color:$text;
+//     border: 1px solid $border-color;
+//   }
+// }
+
+// @each $color, $hex, $text, $border-color in ($link1,$link2) {
+//   .link_#{$color} {
+//     background-color: $hex;
+//     color:$text;
+//     border: 1px solid $border-color;
+//   }
+// }
+
+.btn-toggle {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  flex-flow: column;
+  // width: ;
+  // height: ;
+  background-color: transparent;
+  // border-radius: ;
+  transform: translateY(-50%);
+
+  // @include media-size(sm) {
+  //   right: ;
+  // }
+
+  // @include media-size(md) {
+  //   right: ;
+  // }
+
+  // @include media-size(lg) {
+  //   display: none;
+  // }
+
+  // span {
+  //   width: 70%;
+  //   height: 2px;
+  //   background-color: $white;
+  //   border-radius: 10px;
+  //   transition: $tr_md;
+
+  //   &:not(:first-child) {
+  //     margin-top: 0.3rem;
+  //   }
+  // }
+}
+
+// .btn-toggle_active {
+//   span {
+//     position: absolute;
+
+//     &:nth-child(1) {
+//       transform: rotate(45deg);
+//     }
+
+//     &:nth-child(2) {
+//       opacity: 0;
+//       transform: translateX(-50%);
+//     }
+
+//     &:nth-child(3) {
+//       margin-top: 0;
+//       transform: rotate(-45deg);
+//     }
+//   }
+// }
+
+
+
