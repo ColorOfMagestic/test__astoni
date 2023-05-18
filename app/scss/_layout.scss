@@ -191,10 +191,16 @@
   background-color: $bg;
   .copyright {
     display: flex; 
-    justify-content: space-between;
+    flex-flow: column;
+    gap: 10px;
     padding-block: 22px 25px;
     font-size: 14px;
     font-weight: 300;
+    @include media-size(md) {
+      flex-flow: row;
+      justify-content: space-between;
+
+    }
     a {
       @extend %link;
       transition: color $tr_md;
