@@ -1,4 +1,5 @@
-//  all sass code processing layout
+/* intro*/
+
 .intro {
   position: relative;
   margin-top: 83px;
@@ -39,6 +40,7 @@
     @include flex(center, center);
     @include media-size(md) {
       margin-left: 0;
+      font-size: 18px;
     }
     @include media-size(lg) {
       &:hover {
@@ -138,3 +140,147 @@
     }
   }
 }
+
+/* contact_us */
+
+.contact_us {
+  position: relative;
+  margin-top: 3px;
+  background: url(../img/form-bg.png) no-repeat 50%/cover;
+
+  &-wrapper {
+    padding-block: 40px 50px;
+    display: grid;
+    grid-template: auto/repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    @include media-size(md) {
+      padding-block: 80px 100px;
+    }
+    @include media-size(lg) {
+      padding-block: 122px 140px;
+    }
+  }
+
+  &-info {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    color: $white;
+    @include media-size(md) {
+      align-items: flex-start;
+    }
+    p {
+      max-width: 300px;
+      margin-top: 20px;
+      font-weight: 300;
+      text-align: center;
+      @include media-size(md) {
+        margin-top: 40px;
+      }
+      @include media-size(lg) {
+        max-width: 450px;
+        margin-top: 60px;
+        font-size: 18px;
+      }
+    }
+  }
+}
+.contacts {
+  display: flex;
+  flex-flow: column;
+  gap: 15px;
+  margin-top: 25px;
+  font-weight: 300;
+  @include media-size(md) {
+    margin-top: 40px;
+  }
+  @include media-size(lg) {
+    flex-flow: row nowrap;
+    gap: 0 40px;
+    margin-top: 80px;
+  }
+  
+  a {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    @extend %link;
+    transition: color $tr_md;
+    &:hover {
+    color: $accent;
+    }
+    @include media-size(xl) {
+      font-size: 21px;
+    }
+
+    &:first-child {
+      &::before {
+        margin-right: 15px;
+        content: url(../img/tel_white.svg);
+      }
+    }
+    &:last-child {
+      &::before {
+        margin-right: 15px;
+        content: url(../img/mail_white.svg);
+      }
+    }
+  }
+
+
+
+}
+.contact_us-form {
+  display: grid;
+  grid-template: auto/1fr;
+  gap: 20px;
+  @include media-size(xl) {
+    grid-template: auto/1fr 1fr;
+    gap: 35px 30px;
+  }
+
+
+  &__label {
+    color: $white;
+    line-height: 1.4;
+    @extend %label;
+    @include media-size(xl) {
+    &:last-of-type {
+        grid-column: 1 / 3;
+    }
+    }
+    input {
+      @extend %input;
+    }
+
+    textarea {
+      height: 130px;
+      resize: none;
+      @extend %input;
+    }
+  }
+
+  &__btn {
+    width: 270px;
+    padding: 19px;
+    margin: 0 auto;
+    font-size: 16px;
+    @extend %btn_default;
+    @include media-size(md) {
+      font-size: 18px;
+    }
+    @include media-size(lg) {
+      &:hover {
+        @include hover($white, $accent);
+        }
+  
+    }
+    @include media-size(xl) {
+      grid-column: 2 / 3;
+    }
+  }
+
+}
+
+
+

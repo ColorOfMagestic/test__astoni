@@ -17,9 +17,9 @@
     <header class="header">
         <div class="container">
             <div class="header-wrapper">
-                <img  src="img/logo.svg" alt="Логотип" width="260" height="43">
+                <img src="img/logo.svg" alt="Логотип" width="260" height="43">
                 <div class="info">
-                    <img  src="img/logo.svg" alt="Логотип" width="260" height="43">
+                    <img src="img/logo.svg" alt="Логотип" width="260" height="43">
                     <div class="info__lists">
                         <ul class="info__contacts">
                             <li class=" link--tel"><a href="tel:81112223344">8 (111) 222-33-44</a></li>
@@ -62,26 +62,61 @@
         <article class="intro">
             <div class="intro-swiper swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="img/slider-img.png" alt="Изображение1"/></div>
-                    <div class="swiper-slide"><img src="img/slider-img.png" alt="Изображение2"/></div>
-                    <div class="swiper-slide"><img src="img/slider-img.png" alt="Изображение3"/></div>
-                    <div class="swiper-slide"><img src="img/slider-img.png" alt="Изображение4"/></div>
+                    <div class="swiper-slide"><img src="img/slider-img.png" alt="Изображение1" /></div>
+                    <div class="swiper-slide"><img src="img/slider-img.png" alt="Изображение2" /></div>
+                    <div class="swiper-slide"><img src="img/slider-img.png" alt="Изображение3" /></div>
+                    <div class="swiper-slide"><img src="img/slider-img.png" alt="Изображение4" /></div>
                 </div>
             </div>
-                <div class="intro-wrapper container">
-                    <h1 class="title intro-title">Бухгалтерские услуги<br> в Санкт-Петербурге</h1>
-                    <a  href="javascript:void(0)">Наша презентация</a>
+            <div class="intro-wrapper container">
+                <h1 class="title intro-title">Бухгалтерские услуги<br> в Санкт-Петербурге</h1>
+                <a href="javascript:void(0)">Наша презентация</a>
+            </div>
+            <div class="intro-controls container">
+                <div class="swiper-pagination"></div>
+                <div class="swiper-buttons">
+                    <button data-role="prev" class="swiper-button swiper-button-prev"><svg class="icon">
+                            <use xlink:href="img/sprite.svg#arrow"></use>
+                        </svg></button>
+                    <button data-role="next" class="swiper-button swiper-button-next"><svg class="icon">
+                            <use xlink:href="img/sprite.svg#arrow"></use>
+                        </svg></button>
                 </div>
-                <div class="intro-controls container">
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-buttons">
-                        <button data-role="prev" class="swiper-button swiper-button-prev"><svg class="icon"><use xlink:href="img/sprite.svg#arrow"></use></svg></button>
-                        <button data-role="next" class="swiper-button swiper-button-next"><svg class="icon"><use xlink:href="img/sprite.svg#arrow"></use></svg></button>
-                    </div>
 
-                </div>
+            </div>
         </article>
         <!-- ========== End intro ========== -->
+        <!-- ========== Start contact us ========== -->
+        <article class="contact_us">
+            <div class="container">
+                <div class="contact_us-wrapper">
+                    <div class="contact_us-info">
+                        <h2 class="title">Связь с нами</h2>
+                        <p>У вас остались вопросы? Напишите нам - мы ответим в ближайшее время!</p>
+                        <div class="contacts">
+                            <a href="tel:+71112223344">+7 (111) 222-33-44</a>
+                            <a href="mailto:order@bu-one.ru">order@bu-one.ru</a>
+                        </div>
+                    </div>
+                    <form class="contact_us-form">
+                      <label class="contact_us-form__label">
+                        Имя
+                        <input type="text" name="userName" placeholder="Иван" required>
+                      </label>
+                      <label class="contact_us-form__label">
+                        Фамилия
+                        <input type="text" name="userSecondName" placeholder="Иванов" required>
+                      </label>
+                      <label class="contact_us-form__label">
+                        Сообщение
+                            <textarea  name="message" placeholder="Ваше сообщение" required></textarea>
+                      </label>
+                      <button class="contact_us-form__btn" type="submit">Отправить сообщение</button>
+                    </form>
+                </div>
+            </div>
+        </article>
+        <!-- ========== End contact us ========== -->
     </main>
     <!-- ========== Start footer ========== -->
     <footer class="footer">
@@ -89,6 +124,9 @@
         </div>
     </footer>
     <!-- ========== End footer ========== -->
+    <!-- ========== Start popup ========== -->
+
+    <!-- ========== End popup ========== -->
 
     <script type="module" src="js/libraries.min.js"></script>
     <script type="module" src="js/main.min.js"></script>

@@ -15,7 +15,7 @@ $fontSecond:"Merriweather";
 @font-face {
   font-family: $font;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 300;
   font-display: swap;
   src: url("../fonts/dist/#{$font}-Light.woff2"), url("../fonts/dist/#{$font}-Light.woff");
 }
@@ -29,9 +29,9 @@ $fontSecond:"Merriweather";
 @font-face {
   font-family: $fontSecond;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 900;
   font-display: swap;
-  src: url("../fonts/dist/#{$fontSecond}-Bold.woff2"), url("../fonts/dist/#{$fontSecond}-Bold.woff");
+  src: url("../fonts/dist/#{$fontSecond}-Black.woff2"), url("../fonts/dist/#{$fontSecond}-Black.woff");
 }
 
 
@@ -39,7 +39,7 @@ $fontSecond:"Merriweather";
 /* Variables*/
 $base_font: $font, sans-serif;
 $base_size: 16px;
-$base_line-height: 1.5;
+$base_line-height: 1.4;
 $tr_md: 0.5s;
 
 /* Color */
@@ -236,7 +236,7 @@ html {
   font-size: 24px;
   text-align: center;
   color: $white;
-  font-weight: 700;
+  font-weight: 900;
   @include  media-size(md) {
     font-size: 36px;
     text-align: left;

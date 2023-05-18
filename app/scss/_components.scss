@@ -1,4 +1,3 @@
-// styles for each component needed for this project, including buttons, modal windows, etc.
 
 %btn_default {
   border: none;
@@ -8,6 +7,7 @@
   border: none;
   @include flex(center, center);
   @include font(18px, 400, 1.4 );
+  transition: all $tr_md;
 }
 
 %link {
@@ -19,57 +19,40 @@
 %label {
   display: block;
   width: 100%;
+  font-size: 13px;
+  @include media-size(xl)  {
+    font-size: 16px;
+  }
 }
 
 %input {
   width: 100%;
-  height: 100%;
-  padding: 0.75rem 0.625rem;
+  margin-top: 15px;
+  padding-bottom: 15px;
   width: 100%;
-  font-size: 1em;
-  // color: $dark;
-  // background-color: $input_bg;
-  // border-radius: 3px;
-  // border: 1px solid $white;
+  font-size: 16px;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $white;
   transition: $tr_md;
   outline: 0;
-
-  @include media-size(xxl) {
-    font-size: 1.125em;
+  @include media-size(xl)  {
+    font-size: 21px;
   }
 
   &::placeholder {
+    color: #bdbdbd;
+    font-weight: 300;
     opacity: 1;
   }
 
   &:focus {
     color: white;
-    background-color: rgba(61, 64, 80, 0.85);
+    background-color: rgba(225, 225, 225, 0.1);
   }
 
 }
-
-
-
-
-/*creating color button and link classes*/
-
-// @each $color, $hex, $text, $border-color in ($btn1, $btn2) {
-
-//   .btn_#{$color} {
-//     background-color: $hex;
-//     color:$text;
-//     border: 1px solid $border-color;
-//   }
-// }
-
-// @each $color, $hex, $text, $border-color in ($link1,$link2) {
-//   .link_#{$color} {
-//     background-color: $hex;
-//     color:$text;
-//     border: 1px solid $border-color;
-//   }
-// }
 
 .btn-toggle {
   position: absolute;
@@ -84,14 +67,6 @@
   background-color: transparent;
   border: none;
   transform: translateY(-50%);
-
-  @include media-size(sm) {
-    // right: ;
-  }
-
-  @include media-size(md) {
-    // right: ;
-  }
 
   @include media-size(lg) {
     display: none;
