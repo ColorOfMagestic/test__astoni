@@ -188,7 +188,24 @@
 
 .footer {
   position: relative;
-  // background-color: ;
+  background-color: $bg;
+  .copyright {
+    display: flex; 
+    justify-content: space-between;
+    padding-block: 22px 25px;
+    font-size: 14px;
+    font-weight: 300;
+    a {
+      @extend %link;
+      transition: color $tr_md;
+      &:hover {
+      color: $accent;
+      }
+    }
+    @include media-size(lg) {
+      padding-block: 44px 50px;
+    }
+  }
 }
 
 
